@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello this is template
+    {% comment %} {{name}} is from {{place}} {% endcomment %}
+    <form action="/analyze" method='post'>
+        {% csrf_token %}
+        <textarea name='text' cols="30" rows="10"></textarea>
+        <input type="checkbox" name="removepunc">
+        <input type="checkbox" name="fullcapti">Full Capitalize</br>
+        <input type="checkbox" name="newline">New Line remover</br>
+        <input type="checkbox" name="extraspace">Extra Space remover</br>
+        <button type="submit">Analyze</button>
+    </form>
+</body>
+</html>
